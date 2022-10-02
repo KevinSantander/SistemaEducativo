@@ -73,7 +73,6 @@ var Escula = /** @class */ (function () {
         this.listadoAlumnos = pListadoAlumnos;
         this.listadoProfesores = pListadoProfesores;
     }
-    // get y set para darle el nombre, para contratar y despedir y matricular y remover alumno.
     Escula.prototype.getNombreEscuela = function () {
         return this.nombreEscuela;
     };
@@ -108,7 +107,7 @@ var Escula = /** @class */ (function () {
     };
     return Escula;
 }());
-var alumno1 = new Alumno("pedro", "perez", 5, 6, 7);
+var alumno1 = new Alumno("pedro", "perez", 4, 5, 6);
 var alumno2 = new Alumno("juan", "gomez", 5, 6, 7);
 var alumno3 = new Alumno("luciana", "fernadez", 8, 8, 9);
 var listadoAl = [alumno1, alumno2, alumno3];
@@ -118,3 +117,4 @@ var docenteC = new Profesor("sergio", "almonasi", listadoAl);
 var listadoDeDocentes = [docenteA, docenteB, docenteC];
 var escuelaPrimaria = new Escula("Escuiela N:7", listadoAl, listadoDeDocentes);
 escuelaPrimaria.despredirProfesor(docenteB);
+console.log(escuelaPrimaria);
